@@ -32,12 +32,12 @@ class Result
      * Constructor.
      *
      * @param string $field
-     * @param array  $stats
+     * @param array|null  $stats
      */
-    public function __construct(string $field, array $stats)
+    public function __construct(string $field, ?array $stats)
     {
         $this->field = $field;
-        $this->stats = $stats;
+        $this->stats = $stats ?? [];
     }
 
     /**
